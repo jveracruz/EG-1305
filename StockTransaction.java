@@ -12,6 +12,7 @@ public class StockTransaction {
 		double sellPrice = joeShares*(33.92);
 		double brokerPay2 = sellPrice*COMMISSION_RATE;
 		double profit = (sellPrice + brokerPay2) - (brokerPay1 + totalShare);
+		//This formula is not correct. First calculate the profit: sold - bought, then take off the commission to find the net profit.
 		DecimalFormat formatter = new DecimalFormat("0.00");
 		
 		System.out.println("The ammount of money Joe paid for the stock was $"+formatter.format(totalShare));
