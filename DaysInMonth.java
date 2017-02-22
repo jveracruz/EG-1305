@@ -18,7 +18,7 @@ public class DaysInMonth {
 		int month = input.nextInt();
 		
 		//Checks the year to see if its a leapyear
-		boolean leapyear = (year % 4 == 0) && (year % 10 != 0) || (year % 400 == 0);
+		boolean leapyear = (year % 4 == 0) && (year % 10 != 0) || (year % 400 == 0); //minor error correction(year % 100 != 0) 
 		
 		//Determines the number of days according to the number of month
 		switch(month)
