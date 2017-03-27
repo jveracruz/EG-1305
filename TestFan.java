@@ -16,7 +16,7 @@ public class TestFan {
 		System.out.print("\nEnter a fan speed: ");
 		speed = input.nextInt();
 		
-		System.out.print("Enter the fan status (true or false): ");
+		System.out.print("Enter the fan status: ");
 		fanStatus = input.nextBoolean();
 		
 		System.out.print("Enter a radius: ");
@@ -25,7 +25,7 @@ public class TestFan {
 		System.out.println("Enter a fan color: ");
 		color = input.next();
 		
-		Fan f = new Fan();
+		Fan f = new Fan(speed, fanStatus, radius, color);
 		
 		System.out.println(f.toString());
 		
