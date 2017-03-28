@@ -8,6 +8,7 @@ public class TestFan {
 		boolean fanStatus;
 		int radius;
 		String color;
+		String fanSwitch;
 		
 		Scanner input = new Scanner(System.in);
 		
@@ -16,8 +17,17 @@ public class TestFan {
 		System.out.print("\nEnter a fan speed: ");
 		speed = input.nextInt();
 		
-		System.out.print("Enter the fan status (true or false): ");
-		fanStatus = input.nextBoolean();
+		System.out.print("Enter the fan status (on or off): ");
+		fanSwitch = input.next();
+		if(fanSwitch == "on") {
+			
+			fanStatus = false;
+			
+		}
+		else
+		{
+			fanStatus = true;
+		}
 		
 		System.out.print("Enter a radius: ");
 		radius = input.nextInt();
