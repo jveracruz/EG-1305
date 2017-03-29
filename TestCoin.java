@@ -8,18 +8,21 @@ public class TestCoin {
 		int tailsCount = 0;
 		
 		Coin c = new Coin();
-		System.out.println(c.getSide());
 		
-		for(int i = 0; i < 20; i++) {
+		c.toss();
+		
+		System.out.println("Starting side " + c.getCoin() );
+		
+		for(int i = 0; i <= 20; i++) {
 			
-			c.getSide();
-			c.flip();
-			if(c.flip() == "heads") {
+			c.toss();
+			
+			if(c.getCoin() == "heads") {
 				
 				headsCount++;
 				
 			}
-			else
+			else if(c.getCoin() == "tails")
 			{
 				tailsCount++;
 			}
