@@ -1,41 +1,36 @@
 
 public class Coin {
 	
-	String sideUp;
-	
+	private String sideUp;
 
-	public Coin() {
-		
-		String sideUp;
 	
-	}
-
-	public String getSide() {
-		
-		double side = (Math.random() * 2);
-		if(side == 0)
-		{
-			return "heads";
-		}
-		else
-		{
-			return "tails";
-		}
-		
-	}
 	
-	public String flip() {
+	public void toss() {
 		
-		double side = (Math.random() * 2);
-		if(side == 0)
-		{
-			return "heads";
+			int side = (int) (Math.random() * 2);
+			
+			if(side == 1)
+			{
+				sideUp = "heads";
+			}
+			else
+			{
+				sideUp = "tails";
+			}
+			//System.out.println(side);
 		}
-		else
-		{
-			return "tails";
+	
+		public String getCoin() {
+		
+			return sideUp;
+	
 		}
 		
-	}
-
+	
+		public void Coin() {
+		
+		toss();
+		
+		
+		}
 }
